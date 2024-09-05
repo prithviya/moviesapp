@@ -1,15 +1,23 @@
 import express from "express";
 const router = express.Router();
 
-// C - creating movie
-router.post('/movie', ()=> {});
+// C - Creating movie
+router.post('/', (req, res) => {
+    res.send("creating new movie list using post")
+ });
 // R - Reading movie
-router.get('/movies', ()=> {});
+router.get('/', (req, res) => { 
+    res.send("Reading all movie list using get")
+});
 
-// U - updating movie
-router.put('/movies/:id', ()=> {});
+// U - Updating movie
+router.put('/:id', (req, res) => { 
+    res.send("Updating particular a movie")
+});
 
-// D - deleting movie
-router.delete('/movies/:id', ()=> {});
+// D - Deleting movie
+router.delete('/:id', (req, res) => {
+    res.send("deleting particular a movie in the list")
+ });
 
 export default router;
